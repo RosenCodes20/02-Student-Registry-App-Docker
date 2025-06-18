@@ -1,6 +1,10 @@
 pipeline {
     agent any
-    
+
+    tools {
+        nodejs 'Node 24' // must match the name from Global Tool Config
+    }
+
     stages {
         stage('Install Dependencies') {
             steps {
